@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apprentices Beyond Borders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="w-[90%] flex flex-col gap-8 pt-24 relative xl:w-auto">
+      <div class="flex flex-col gap-6 text-center relative">
+        <span class="xl:absolute right-0 top-0 -my-4">(ABB)</span>
+        <h1 class="font-bold">Apprentices Beyond Borders</h1>
+        <h6>Skill Acquisition Training Delivery</h6>
+      </div>
+
+      <div class="inner-container flex flex-col gap-24">
+        <form method="post" action="/api/v1/users" class="flex flex-col gap-4" id="form">
+          <div class="flex flex-col md:flex-row gap-4 justify-between">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="w-full py-2 px-6 rounded-[4px] border-none outline-none"
+              placeholder="Please enter email"
+            />
+            <input
+              type="submit"
+              value="Subscribe"
+              class="bg-[#0C6246] text-[#F7F7F7] py-2 px-6 rounded-[4px] hover:cursor-pointer"
+            />
+          </div>
+          <small>
+            By clicking Sign Up you're confirming that you agree with our Terms
+            & Conditions
+          </small>
+        </form>
+        <div class="countdown flex flex-col gap-6 text-center">
+          <h4>Coming Soon...</h4>
+          <div
+            class="countdowntimer flex justify-center gap-6 bg-[#CAD5CF] py-3 px-6 rounded-[4px]"
+          >
+            <div class="flex gap-2 items-center" id="day">
+              <h3 class="font-semibold"></h3>
+              <span></span>
+            </div>
+            <div class="flex gap-2 items-center" id="hour">
+              <h3 class="font-semibold"></h3>
+              <span></span>
+            </div>
+            <div class="flex gap-2 items-center" id="mins">
+              <h3 class="font-semibold"></h3>
+              <span></span>
+            </div>
+            <div class="flex gap-2 items-center" id="sec">
+              <h3 class="font-semibold"></h3>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal text-black text-center bg-[#cad5cfa5] absolute top-0 left-0 p-2 rounded-md" id="modal">
+      </div>
+    </main>
+  </body>
+</html>

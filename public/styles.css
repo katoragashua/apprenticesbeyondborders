@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+  /* outline: 1px solid green; */
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.4em;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: 1.1;
+}
+
+h4 {
+  font-size: 1.4em;
+  line-height: 1.1;
+}
+
+h5 {
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.1;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("./assets/images/abb.png");
+  /* background-position: center center; */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  @apply w-[60%] m-auto my-auto text-center
+  /* @apply  m-auto my-auto text-center */
+}
+
+.inner-container {
+  @apply w-full m-auto text-center md:w-[80%] xl:w-[80%]
+}
+
+@media screen {
+  
+}
+@media (width <= 500px) {
+  .countdowntimer {
+    font-size: 14px;
+    gap: .5rem;
+    margin-bottom: 4rem;
+  }
+
+  .countdowntimer div {
+    gap: 4px;
+  }
+}
