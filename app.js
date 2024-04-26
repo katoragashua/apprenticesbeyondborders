@@ -101,9 +101,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post("/api/v1/users", saveUserEmail);
 app.get("/api/v1/users", getEmails);
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+
 
 app.use(notFound);
 app.use(errorHandlerMiddleware);
