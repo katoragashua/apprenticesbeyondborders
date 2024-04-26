@@ -7,6 +7,7 @@ import cors from "cors";
 import "express-async-errors";
 config();
 const router = Router();
+import path from "path";
 
 import mongoose from "mongoose";
 import Isemail from "isemail";
@@ -85,6 +86,7 @@ const saveUserEmail = async (req, res) => {
     );
 
   const user = await User.create({ email });
+  await User.deleteMany({});
   res.status(200).json({ msg: "You have subscribed successfully.", user });
 };
 
@@ -95,7 +97,7 @@ const getEmails = async (req, res) => {
 
 app.use(morgan("tiny"));
 app.use(express.json());
-app.use("/", express.static("./public"));
+app.use("/", express.static(path.resolve("./public")));
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
