@@ -7,7 +7,6 @@ import cors from "cors";
 import "express-async-errors";
 config();
 const router = Router();
-import path from "path";
 
 import mongoose from "mongoose";
 import Isemail from "isemail";
@@ -96,15 +95,10 @@ const getEmails = async (req, res) => {
 
 app.use(morgan("tiny"));
 app.use(express.json());
-app.use("/", express.static("public"));
-
-
+app.use("/", express.static("./public"));
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", function (req, res) {
-  res.sendFile("/public/index.html");
-});
 app.post("/api/v1/users", saveUserEmail);
 app.get("/api/v1/users", getEmails);
 
