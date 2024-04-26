@@ -95,13 +95,12 @@ const getEmails = async (req, res) => {
 
 app.use(morgan("tiny"));
 app.use(express.json());
-app.use(express.static("./public"));
+app.use("/", express.static("./public"));
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/api/v1/users", saveUserEmail);
 app.get("/api/v1/users", getEmails);
-
 
 app.use(notFound);
 app.use(errorHandlerMiddleware);
