@@ -103,7 +103,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.sendFile("/public/index/index.html");
+  res.sendFile("/public/index.html");
 });
 app.post("/api/v1/users", saveUserEmail);
 app.get("/api/v1/users", getEmails);
