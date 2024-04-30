@@ -579,6 +579,11 @@ video {
   margin-bottom: -1rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -593,10 +598,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 .flex-col {
