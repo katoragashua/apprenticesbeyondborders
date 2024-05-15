@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
   const userData = Object.fromEntries(formData);
   console.log(userData);
   try {
-    const res = await fetch("https://www.apprenticesbeyondborders.com/api/v1/users", {
+    const res = await fetch("/api/v1/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

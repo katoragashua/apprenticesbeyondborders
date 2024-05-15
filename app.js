@@ -86,7 +86,7 @@ const saveUserEmail = async (req, res) => {
     );
 
   const user = await User.create({ email });
-  await User.deleteMany({});
+  // await User.deleteMany({});
   res.status(200).json({ msg: "You have subscribed successfully.", user });
 };
 
